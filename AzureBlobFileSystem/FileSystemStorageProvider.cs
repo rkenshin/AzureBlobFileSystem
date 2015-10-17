@@ -300,7 +300,12 @@ namespace AzureBlobFileSystem
         {
             return Path.Combine(path1, path2);
         }
-
+        
+        /// <summary>
+        /// Checks if a file exists
+        /// </summary>
+        /// <param name="path">The relative file path.</param>
+        /// <returns>True if the file exists, false otherwise</returns>
         public bool FileExists(string path)
         {
             return new FileInfo(MapStorage(path)).Exists;
